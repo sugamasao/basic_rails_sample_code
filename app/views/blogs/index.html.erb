@@ -16,9 +16,7 @@
         <td><%= blog.title %></td>
         <td>
           <ul>
-            <% blog.entries.each do |entry|%>
-              <%= render partial: "entry", locals: { entry: entry } %>
-            <% end %>
+            <%= render partial: "entry", collection: blog.entries, as: :entry %>
           </ul>
         </td>
         <td><%= link_to 'Show', blog %></td>
